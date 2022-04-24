@@ -40,6 +40,9 @@ PRODUCT_COMPRESSED_APEX := false
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
+# Properties
+include $(LOCAL_PATH)/props/default.mk
+
 # AID/fs configs
 PRODUCT_PACKAGES += \
     fs_config_files
