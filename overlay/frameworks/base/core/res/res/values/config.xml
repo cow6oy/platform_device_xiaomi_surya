@@ -589,7 +589,7 @@
     <bool name="config_zramWriteback">true</bool>
 
     <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
-    <string name="config_oemFastChargerStatusPath" translatable="false">/sys/class/power_supply/bms/fastcharge_mode</string>
+    <string name="config_oemFastChargerStatusPaths" translatable="false">/sys/class/power_supply/bms/fastcharge_mode</string>
 
     <!-- The bounding path of the cutout region of the main built-in display.
          Must either be empty if there is no cutout region, or a string that is parsable by
