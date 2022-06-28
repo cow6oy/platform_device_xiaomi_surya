@@ -87,10 +87,22 @@ on post-fs-data
     mkdir /data/vendor/thermal 0771 root system
     mkdir /data/vendor/thermal/config 0771 root system
 
+    # Create fingerprint related directory
+    mkdir /data/vendor/fpc 0770 system system
+    mkdir /data/vendor/goodix 0770 system system
+
 on boot
     start rmt_storage
     start rfs_access
     start mi_thermald
+
+    # Set fingerprint related permissions
+    chown system system /sys/bus/platform/devices/soc/soc:fpc1020/irq
+    chown system system /sys/bus/platform/devices/soc/soc:fpc1020/wakeup_enable
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/fod_ui
+
+    # Create fingerprint related directory
+    mkdir /mnt/vendor/persist/goodix 0770 system system
 
 # access permissions for vibrator calibration
     chmod 0666 sys/devices/platform/soc/884000.i2c/i2c-3/3-005a/cali
