@@ -18,6 +18,9 @@
 -->
 
 <resources>
+    <!-- Whether device has fingerprint on power button -->
+    <bool name="config_powerButtonFingerprint">true</bool>
+
     <!-- Doze: does this device support STATE_DOZE?  -->
     <bool name="doze_display_state_supported">true</bool>
   
